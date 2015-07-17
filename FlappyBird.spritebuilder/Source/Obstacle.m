@@ -32,8 +32,8 @@ static const CGFloat maximumYPosition = 380.f;
   // value between 0.f and 1.f
   CGFloat random = ((double)arc4random() / ARC4RANDOM_MAX);
   CGFloat range = maximumYPosition - minimumYPosition;
-  self.position = ccp(self.position.x, minimumYPosition + (random * range) + 100);
-    // + 10 as being offset, for example
+  self.position = ccp(self.position.x + 100, minimumYPosition + (random * range) + 100);
+    // x and y position being offset by + 100 as being offset, for example
 }
 
 @end
