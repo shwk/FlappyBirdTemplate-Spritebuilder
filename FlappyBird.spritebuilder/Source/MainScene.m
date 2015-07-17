@@ -150,6 +150,8 @@
     CGPoint worldPosition = [physicsNode convertToNodeSpace:screenPosition];
     obstacle.position = worldPosition;
     [obstacle setupRandomPosition];
+    // position offset included in obstacle function, see obstable function
+    
     obstacle.zOrder = DrawingOrderPipes;
     [physicsNode addChild:obstacle];
     [_obstacles addObject:obstacle];
