@@ -7,7 +7,7 @@
 //
 
 #import "MainScene.h"
-#import "Obstacle.h"
+//#import "Obstacle.h"
 
 @interface CGPointObject : NSObject
 {
