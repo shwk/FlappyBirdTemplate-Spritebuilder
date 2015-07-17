@@ -191,17 +191,20 @@
         // if the left corner is one complete width off the screen, move it to the right
         if (groundScreenPosition.x <= (-1 * ground.contentSize.width))
         {
-            ground.position = ccp(ground.position.x + 2 * ground.contentSize.width, ground.position.y *100);
+            ground.position = ccp(ground.position.x + 2 * ground.contentSize.width, ground.position.y);
         }
     }
     
     NSMutableArray *offScreenObstacles = nil;
     
-    for (CCNode *obstacle in _obstacles) {
+    for (CCNode *obstacle in _obstacles)
+    {
         CGPoint obstacleWorldPosition = [physicsNode convertToWorldSpace:obstacle.position];
         CGPoint obstacleScreenPosition = [self convertToNodeSpace:obstacleWorldPosition];
-        if (obstacleScreenPosition.x < -obstacle.contentSize.width) {
-            if (!offScreenObstacles) {
+        if (obstacleScreenPosition.x < -obstacle.contentSize.width)
+        {
+            if (!offScreenObstacles)
+            {
                 offScreenObstacles = [NSMutableArray array];
             }
             [offScreenObstacles addObject:obstacle];
@@ -240,7 +243,7 @@
         if (bushScreenPosition.x <= (-1 * bush.contentSize.width)) {
             for (CGPointObject *child in _parallaxBackground.parallaxArray) {
                 if (child.child == bush) {
-                    child.offset = ccp(child.offset.x + 2*bush.contentSize.width, child.offset.y);
+                    child.offset = ccp(child.offset.x + 2*bush.contentSize.width + 100, child.offset.y);
                 }
             }
         }
