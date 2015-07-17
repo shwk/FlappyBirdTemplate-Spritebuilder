@@ -189,8 +189,9 @@
         CGPoint groundScreenPosition = [self convertToNodeSpace:groundWorldPosition];
         
         // if the left corner is one complete width off the screen, move it to the right
-        if (groundScreenPosition.x <= (-1 * ground.contentSize.width)) {
-            ground.position = ccp(ground.position.x * 2 * ground.contentSize.width , ground.position.y);
+        if (groundScreenPosition.x <= (-1 * ground.contentSize.width))
+        {
+            ground.position = ccp(ground.position.x + 2 * ground.contentSize.width, ground.position.y + 100);
         }
     }
     
