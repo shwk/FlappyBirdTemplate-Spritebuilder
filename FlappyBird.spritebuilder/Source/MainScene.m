@@ -7,7 +7,7 @@
 //
 
 #import "MainScene.h"
-//#import "Obstacle.h"
+#import "Obstacle.h"
 
 @interface CGPointObject : NSObject
 {
@@ -149,7 +149,7 @@
     CGPoint screenPosition = [self convertToWorldSpace:ccp(380, 0)];
     CGPoint worldPosition = [physicsNode convertToNodeSpace:screenPosition];
     obstacle.position = worldPosition;
-    [obstacle setupRandomPosition];
+   // [obstacle setupRandomPosition];
     
     obstacle.zOrder = DrawingOrderPipes;
     [physicsNode addChild:obstacle];
