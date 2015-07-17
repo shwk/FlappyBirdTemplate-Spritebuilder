@@ -148,7 +148,7 @@
     Obstacle *obstacle = (Obstacle *)[CCBReader load:@"Obstacle"];
     CGPoint screenPosition = [self convertToWorldSpace:ccp(380, 0)];
     CGPoint worldPosition = [physicsNode convertToNodeSpace:screenPosition];
-    obstacle.position = worldPosition + 100;
+    obstacle.position = worldPosition;
    // [obstacle setupRandomPosition];
     
     obstacle.zOrder = DrawingOrderPipes;
@@ -191,7 +191,7 @@
         // if the left corner is one complete width off the screen, move it to the right
         if (groundScreenPosition.x <= (-1 * ground.contentSize.width))
         {
-            ground.position = ccp(ground.position.x + 2 * ground.contentSize.width, ground.position.y);
+            ground.position = ccp(ground.position.x + 2 * ground.contentSize.width + 100, ground.position.y);
         }
     }
     
@@ -243,7 +243,7 @@
         if (bushScreenPosition.x <= (-1 * bush.contentSize.width)) {
             for (CGPointObject *child in _parallaxBackground.parallaxArray) {
                 if (child.child == bush) {
-                    child.offset = ccp(child.offset.x + 2*bush.contentSize.width, child.offset.y);
+                    child.offset = ccp(child.offset.x + 2*bush.contfentSize.width, child.offset.y);
                 }
           }
         }
