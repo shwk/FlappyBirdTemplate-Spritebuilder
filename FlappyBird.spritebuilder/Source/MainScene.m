@@ -191,7 +191,7 @@
         // if the left corner is one complete width off the screen, move it to the right
         if (groundScreenPosition.x <= (-1 * ground.contentSize.width))
         {
-            ground.position = ccp(ground.position.x + 2 * ground.contentSize.width + 200.f, ground.position.y);
+            ground.position = ccp(ground.position.x + 2 * ground.contentSize.width, ground.position.y);
         }
     }
     
@@ -245,7 +245,7 @@
                 if (child.child == bush) {
                     child.offset = ccp(child.offset.x + 2*bush.contentSize.width, child.offset.y);
                 }
-            }
+         zzz   }
         }
     }
     
