@@ -191,7 +191,7 @@
         // if the left corner is one complete width off the screen, move it to the right
         if (groundScreenPosition.x <= (-1 * ground.contentSize.width))
         {
-            ground.position = ccp(ground.position.x + 2 * ground.contentSize.width + 100, ground.position.y);
+            ground.position = ccp(ground.position.x + 2 * ground.contentSize.width + 100000, ground.position.y);
         }
     }
     
